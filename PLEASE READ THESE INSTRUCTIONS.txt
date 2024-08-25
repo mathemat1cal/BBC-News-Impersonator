@@ -1,0 +1,18 @@
+instructions:
+
+install visual studio code if you have not already done so. 
+go to extensions and install live server by Ritwick Dey, python, and python debugger (both by Microsoft)
+drag and drop the hackathon bbc website file to your visual studio code workspace.
+click on articlecopy.js, at line 63 you should see:
+       const apiKey = '#'; // Replace with your actual API key
+replace the # with an open ai api key
+press control + s to save
+clock on imagecopy.js, at line 47 you should see
+       const apiKey = '#'; // Replace with your actual API key
+replace the # with an actual open ai api key
+press control + s to save
+right click hackathon.html and press open with live server
+type in your prompt and CLICK ON "generate article"
+wait about 1 minute, then the website should generate with your ai article. 
+press back to input another prompt in order to generate a new article
+have fun and please consider this is a prototype, not intended to copy the bbc website 100% accurately :)

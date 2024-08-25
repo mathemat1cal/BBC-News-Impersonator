@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC Replica with AI Generators</title>
+    <link rel="stylesheet" href="substance.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://th.bing.com/th/id/R.778f4632c1b1873b134967c50f903200?rik=uGylD1keRKqqgw&pid=ImgRaw&r=0" alt="BBC Logo"> <!-- Replace with your BBC logo image -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Weather</a></li>
+                    <li><a href="#">iPlayer</a></li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="#">Sign In</a>
+                <a href="#">Notifications</a>
+                <div class="search-container">
+                    <input type="text" placeholder="Search BBC">
+                    <img src="https://www.freeiconspng.com/uploads/search-icon-png-21.png" alt="Search"> <!-- Replace with your search icon -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="submenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">InDepth</a></li>
+            <li><a href="#">Israel-Gaza War</a></li>
+            <li><a href="#">US Election</a></li>
+            <li><a href="#">Cost of Living</a></li>
+            <li><a href="#">War in Ukraine</a></li>
+            <li><a href="#">Climate</a></li>
+            <li><a href="#">UK</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Business</a></li>
+        </ul>
+        <div class="more-button">More</div>
+    </div>
+
+    <main>
+        <div id="titleImageArticleContainer">
+            <!-- Areas where generated content will be displayed -->
+            <div id="generatedTitleDisplay"></div> <!-- This will hold the generated title -->
+            <div id="generatedImageContainer"></div> <!-- This will hold the generated image -->
+            <div id="generatedArticleOutput"></div> <!-- This will hold the generated article -->
+        </div>
+    
+        <section id="ai-generators">
+            <!-- Title Generator Section -->
+            <div id="titleGenerator">
+                <h2 class="section-title"></h2>
+                <input id="promptInput" type="text" placeholder style="display: none;">
+                <button id="generateTitleButton"></button>
+            </div>
+            
+            <!-- Image Generator Section -->
+            <div id="imageGenerator">
+                <h2 class="section-title"></h2>
+                <input id="imagePromptInput" type="text" placeholder style="display: none;">
+                <button id="generateImageButton"></button>
+            </div>
+            
+            <!-- Article Generator Section -->
+            <div id="articleGenerator">
+                <h2 class="section-title"></h2>
+                <input id="articlePromptInput" type="text" placeholder style="display: none;">
+                <button id="generateArticleButton"></button>
+            </div>
+        </section>
+    
+        <section class="news-grid">
+            <div class="news-item">
+                <img src="https://th.bing.com/th/id/R.d3c9282fa58834b00161f25181fc3caf?rik=zOVFZu364ARJuA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fb%2fb4%2fGolden_Retriever_puppy_standing.jpg&ehk=Kk2kjbQaS3iQrO0963NOU8IKTCWRw23eH6dmLA8jFa8%3d&risl=1&pid=ImgRaw&r=0" alt="News Image">
+                <h2>Dogs Learn To Play Chess</h2>
+                <p>Is our new competition our fellow canine companion instead of AI?</p>
+            </div>
+            <div class="news-item">
+                <img src="https://lp-cms-production.imgix.net/features/2010/07/akihabara_lights_tokyo-fa3cbf4bacab.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=23&dpr=4" alt="News Image">
+                <h2>Top Holiday Destinations If You Are Just Learning To Teleport</h2>
+                <p>Just got your teleportation licence? Here is a list of teleport friendly destinations</p>
+            </div>
+            <div class="news-item">
+                <img src="https://th.bing.com/th/id/OIP.IVxEFcQfu_Z9mzdDDIGxYQHaE8?rs=1&pid=ImgDetMain" alt="News Image">
+                <h2>Waffles: Does The Delicious Breakfast Item Actually Radiate Uranium 238?</h2>
+                <p>Health experts warn a lot of brands producing one of the most iconic breakfast foods is actually radiating Uranium's most popular isotope</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <section id="top-stories">
+            <h2>Top Stories</h2>
+            <div class="story-item">
+                <a href="">LIVE German police arrest 15-year-old after three people killed in knife attack</a>
+                <p class="time">51 minutes ago</p>
+            </div>
+            <div class="story-item">
+                <a href="">Manslaughter considered by Sicily yacht sinking investigators</a>
+                <p class="time">51 minutes ago</p>
+            </div>
+            <div class="story-item">
+                <a href="">I am sorry and ashamed after BBC sacking - Jenas</a>
+                <p class="time">10 hours ago</p>
+            </div>
+        </section>
+        <section id="featured">
+            <h2>Features</h2>
+            <div class="feature-item">
+                
+                <a href="">He lost his legs in the war, now he’s Ukraine's most desirable man</a>
+            </div>
+            <div class="feature-item">
+                
+                <a href="">Mpox made my throat so painful I couldn’t sleep</a>
+            </div>
+            <div class="feature-item">
+                
+                <a href="">Viral US TikToker's mission to prove British food isn't bland after all</a>
+            </div>
+            <div class="feature-item">
+                
+                <a href="">Kamala Harris campaign is light on policy - but that's helped her transform the race</a>
+            </div>
+            <div class="feature-item">
+                
+                <a href="">'Very demure, very mindful' - are we missing the joke of viral trend?</a>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <ul class="footer-nav">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">About the BBC</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Accessibility Help</a></li>
+            <li><a href="#">Parental Guidance</a></li>
+            <li><a href="#">Contact the BBC</a></li>
+            <li><a href="#">Make an editorial complaint</a></li>
+            <li><a href="#">Get Personalised Newsletters</a></li>
+            <li><a href="#">Why you can trust the BBC</a></li>
+        </ul>
+        <p>&copy; 2024 BBC. The BBC is not responsible for the content of this site. This is all satirical.
+            Powered by OpenAI (if the API key works), created by <a href="#">Finn</a></p>
+    </footer>
+
+   <!-- JavaScript -->
+    <script src="imagecopy.js"></script>
+    <script src="articlecopy.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const titlePrompt = localStorage.getItem('titlePrompt');
+            const imagePrompt = localStorage.getItem('imagePrompt');
+            const articlePrompt = localStorage.getItem('articlePrompt');
+        
+            if (titlePrompt) {
+                // Set the title prompt and trigger generation
+                document.getElementById('promptInput').value = titlePrompt;
+                document.getElementById('generateTitleButton').click();
+                localStorage.removeItem('titlePrompt');
+            }
+        
+            if (imagePrompt) {
+                // Set the image prompt and trigger generation
+                document.getElementById('imagePromptInput').value = imagePrompt;
+                document.getElementById('generateImageButton').click();
+                localStorage.removeItem('imagePrompt');
+            }
+        
+            if (articlePrompt) {
+                // Set the article prompt and trigger generation
+                document.getElementById('articlePromptInput').value = articlePrompt;
+                document.getElementById('generateArticleButton').click();
+                localStorage.removeItem('articlePrompt');
+            }
+        });
+        </script>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

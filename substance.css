@@ -1,0 +1,494 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+/* Continue for other heading levels as needed */
+
+/* AI Generators Section */
+
+/* Article Title Styling */
+.article-title {
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: bold;
+    margin: 20px 0; /* Add space around the title */
+    line-height: 1.3; /* Adjust line height for readability */
+    color: #333; /* Dark color for readability */
+}
+
+/* Article Content Styling */
+.article-content {
+    font-size: 1.1rem; /* Font size for article content */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Space after paragraphs */
+}
+
+/* Ensure proper spacing for paragraphs in the article */
+.article-content p {
+    margin-bottom: 1.2em; /* Space between paragraphs */
+}
+
+
+
+
+.output-container img {
+    width: 50%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn't overflow the container */
+    display: block;
+    object-fit: contain; /* Ensure the image fits within its container */
+}
+
+
+
+.article-title {
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+
+#contentContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 80px; /* Increased padding on the left side */
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    overflow: visible; /* Allow overflow if needed */
+    position: relative; /* Ensure relative positioning for proper layout */
+}
+
+/* Ensure the container for inner content aligns to the left */
+#innerContentContainer {
+    text-align: left; /* Align content inside to the left */
+    overflow: visible; /* Allow overflow if needed */
+    position: relative; /* Ensure relative positioning for proper layout */
+}
+
+/* Generated Title Styling */
+#generatedTitle {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #333;
+    display: block !important; /* Ensure these elements are not hidden */
+    visibility: visible !important; /* Ensure these elements are visible */
+}
+
+/* Image Styling */
+#imageContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: visible; /* Allow overflow if needed */
+    position: relative; /* Ensure relative positioning for proper layout */
+    display: block !important; /* Ensure these elements are not hidden */
+    visibility: visible !important; /* Ensure these elements are visible */
+}
+
+#imageContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Article Styling */
+#articleOutput {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left; /* Align the article text to the left */
+    display: block !important; /* Ensure these elements are not hidden */
+    visibility: visible !important; /* Ensure these elements are visible */
+}
+
+/* Header Styles */
+header {
+    background-color: #B80000; /* Red background for header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+/* Header container for layout control */
+.header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Distribute space between logo, navigation, and right-side items */
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    margin-right: 20px; /* Space between logo and navigation */
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Navigation styles */
+.main-nav {
+    flex-grow: 1; /* Allow navigation to take up available space */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Reduce space between navigation items */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Align items vertically center */
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Adjust padding for a compact look */
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+    border-radius: 5px; /* Round corners on hover */
+}
+
+/* Right side of the header */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce space between items */
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Adjust padding for a compact look */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-container img {
+    height: 20px;
+    margin-left: 5px;
+}
+
+/* Submenu Styles */
+.submenu {
+    background-color: #B80000; /* Match the header background color */
+    color: white;
+    padding: 10px 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+}
+
+.submenu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more-button {
+    background-color: white;
+    color: #B80000;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 30px; /* Adjust this value for more or less space */
+}
+
+/* Sidebar and Toggle Button Enhancements */
+.sidebar {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    width: 300px;
+    height: calc(100% - 60px); /* Adjusted for header */
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-left: 2px solid #ddd;
+    overflow-y: auto; /* Make the sidebar scrollable vertically */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.sidebar.collapsed {
+    transform: translateX(100%);
+}
+
+#sidebar-toggle {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #c40000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar-toggle:hover {
+    background-color: #a30000;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 80%;
+    }
+
+    #sidebar-toggle {
+        right: 10px;
+        padding: 8px 12px;
+    }
+}
+
+/* Sidebar Section Headings */
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* Top Stories Section */
+#top-stories .story-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#top-stories .story-item:last-child {
+    border-bottom: none;
+}
+
+#top-stories a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+#top-stories a:hover {
+    text-decoration: underline;
+}
+
+#top-stories .time {
+    font-size: 0.85em;
+    color: #888;
+}
+
+/* Features Section */
+#featured .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#featured .feature-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#featured .feature-item a {
+    font-weight: bold;
+    color: #c40000;
+    text-decoration: none;
+    font-size: 1.1em;
+    line-height: 1.2;
+}
+
+#featured .feature-item a:hover {
+    text-decoration: underline;
+}
+
+#featured .feature-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Main Content Area */
+/* Adjust main content area margin */
+main {
+    flex: 1;
+    margin-top: 140px; /* Adjusted to make space for the fixed header */
+    padding: 20px;
+    margin-right: 320px; /* Space for the sidebar */
+    margin-left: 20px; /* Space from the left margin */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1024px) {
+    main {
+        margin-right: 0;
+        margin-left: 10px; /* Adjust left margin for smaller screens */
+    }
+}
+/* AI Generators Section */
+#ai-generators {
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* News Grid */
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* General Footer Styles */
+footer {
+    background-color: #111; /* Dark background like BBC */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Navigation Links */
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.footer-nav li {
+    margin: 5px 10px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin: 5px 0;
+    }
+
+    .footer-nav a {
+        font-size: 16px;
+    }
+}
+
+/* Hide elements with class 'hidden' */
+.hidden {
+    display: none !important;
+}
+
+/* Ensure that generated content remains visible */
+#generatedTitle, #imageContainer, #articleOutput {
+    display: block !important;
+    visibility: visible !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
