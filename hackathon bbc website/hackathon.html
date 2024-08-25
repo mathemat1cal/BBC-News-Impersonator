@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcastic BBC News</title>
+    <script src="imagecopy.js" defer></script>
+    <script src="articlecopy.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo-placeholder {
+            background-color: #d9d9d9;
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #b90000;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #b90000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #a00000;
+        }
+        .preset-button {
+            display: inline-block;
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .preset-button:hover {
+            background-color: #e1e1e1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <img src="https://media.discordapp.net/attachments/564881639335788557/1276929523048251472/https3A2F2Fprod-files-secure.png?ex=66cbf98a&is=66caa80a&hm=6d05418ce349cef6f6b4facabb11f1cfb8b5523a9470454d3cdc90e35861b1ec&=&format=webp&quality=lossless&width=312&height=302" alt="BBC Logo" width="150" height="150" />
+    </div>
+    <h1>Welcome to <span style="color: #b90000;">Sarcastic BBC News</span></h1>
+    <p>→ Choose any topic*</p>
+    <p>→ We’ll use AI to generate a <em>genuine looking</em> BBC News Article on that topic</p>
+    <p>→ As a bonus, we’ll write the article as if it was written by a journalist with a sarcasm problem</p>
+    <input type="text" id="userPrompt" placeholder="Type the topic of the article you’d like below">
+    <button onclick="submitPrompt()">Generate Article</button>
+    <p style="font-size: 12px; color: #888;">*The models we’re using do not work with offensive content, so bear this in mind</p>
+    <p>... or choose from some of our presets:</p>
+    <div class="preset-button" onclick="setPreset('Procrastination is the key to productivity')">🤔 Procrastination is the key to productivity</div>
+    <div class="preset-button" onclick="setPreset('Humans breathing accelerates global warming')">😒 Humans breathing accelerates global warming</div>
+    <div class="preset-button" onclick="setPreset('Welsh squirrels attack and invade English Forests')">🦡 Welsh squirrels attack and invade English Forests</div>
+    <div class="preset-button" onclick="setPreset('Increased exercise results in tiredness')">😓 Increased exercise results in tiredness</div>
+</div>
+
+<script>
+    function submitPrompt() {
+        const prompt = document.getElementById('userPrompt').value.trim();
+        if (prompt) {
+            // Save the prompt to localStorage
+            localStorage.setItem('titlePrompt', prompt);
+            localStorage.setItem('imagePrompt', prompt);
+            localStorage.setItem('articlePrompt', prompt);
+
+            // Redirect to bbctest.html
+            window.location.href = 'http://127.0.0.1:5500/hackathon%20bbc%20website/bbctest.html';
+        } else {
+            alert("Please enter a prompt");
+        }
+    }
+
+    function setPreset(presetText) {
+        document.getElementById('userPrompt').value = presetText;
+    }
+</script>
+
+</body>
+</html>
