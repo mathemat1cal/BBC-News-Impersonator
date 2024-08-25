@@ -44,7 +44,7 @@ document.getElementById('generateImageButton').addEventListener('click', async f
 
 // Function to generate an image and update the container
 async function generateImage(prompt) {
-    const apiKey = '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'; // Replace with your actual API key
+    const apiKey = '#'; // Replace with your actual API key
     const imageContainer = document.getElementById('generatedImageContainer');
     imageContainer.innerHTML = ''; // Clear any existing content
 
