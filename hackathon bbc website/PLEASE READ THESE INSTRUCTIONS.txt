@@ -13,6 +13,6 @@ replace the # with an actual open ai api key
 press control + s to save
 right click hackathon.html and press open with live server
 type in your prompt and CLICK ON "generate article"
-wait about 1 minute, then the website should generate with your ai article. 
+wait about 1-2 minute, then the website should generate with your ai article. please remember to be patient with the ai, as it takes a while to generate requests
 press back to input another prompt in order to generate a new article
 have fun and please consider this is a prototype, not intended to copy the bbc website 100% accurately :)
